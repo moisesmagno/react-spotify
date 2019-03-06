@@ -1,13 +1,13 @@
-import React, { Component } from 'react';
+import React, { Fragment } from 'react';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <h1>Spotify 1</h1>
-      </div>
-    );
-  }
-}
+// Styles global
+import GlobalStyle  from './styles/global';
+
+const App = () => (
+  <Fragment>
+      <GlobalStyle/>
+      <h1>SPOTIFY 1</h1>
+  </Fragment>
+);
 
 export default App;
