@@ -3,11 +3,13 @@ import React, { Fragment } from 'react';
 // Styles global
 import GlobalStyle  from './styles/global';
 
+import Sidebar from './components/Sidebar';
+
 const App = () => (
-  <Fragment>
-      <GlobalStyle/>
-      <h1>SPOTIFY 1</h1>
-  </Fragment>
+	<Fragment>
+		<GlobalStyle />
+		<Sidebar />
+	</Fragment>
 );
 
 export default App;
