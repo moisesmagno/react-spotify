@@ -1,5 +1,8 @@
 import { createGlobalStyle } from 'styled-components';
 
+// Importar os estilos globais do rc-slider
+import 'rc-slider/assets/index.css';
+
 const GlobalStyle = createGlobalStyle`
 	* {
 		margin: 0;
