@@ -3,7 +3,7 @@ import { BrowserRouter } from 'react-router-dom';
 
 // Styles global
 import GlobalStyle  from './styles/global';
-import { Wrapper, Conteiner, Content } from './styles/components';
+import { Wrapper, Container, Content } from "./styles/components";
 
 import Header from './components/Header';
 import Sidebar from './components/Sidebar';
@@ -16,13 +16,13 @@ const App = () => (
 		<Fragment>
 			<GlobalStyle />
 			<Wrapper>
-				<Conteiner>
+				<Container>
 					<Sidebar />
 					<Content>
 						<Header />
 						<Routes />
 					</Content>
-				</Conteiner>
+				</Container>
 				<Player />
 			</Wrapper>
 		</Fragment>
