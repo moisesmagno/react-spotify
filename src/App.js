@@ -1,6 +1,8 @@
 import React, { Fragment } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 
+import './config/reactotron';
+
 // Styles global
 import GlobalStyle  from './styles/global';
 import { Wrapper, Container, Content } from "./styles/components";
