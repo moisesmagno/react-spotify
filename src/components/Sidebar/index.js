@@ -13,7 +13,7 @@ import AddPlaylistIcon from '../../assets/images/add_playlist.svg';
 class Sidebar extends Component {
 
 	static propTypes = {
-		getPlaylistsRequest: PropTypes.func.isRequired,
+		getPlayListRequest: PropTypes.func.isRequired,
 		playlists: PropTypes.shape({
 			data: PropTypes.arrayOf(PropTypes.shape({
 				id: PropTypes.number,
@@ -32,7 +32,7 @@ class Sidebar extends Component {
 			<Container>
 				<div>
 					<Nav main>
-						<li><a href="#">Navegar</a></li>
+						<li><a href="/">Navegar</a></li>
 						<li><a href="#">Rádio</a></li>
 					</Nav>
 
