@@ -13,9 +13,9 @@ const INITIAL_STATE = {
 export default function playlists(state = INITIAL_STATE, action){
 	switch(action.type){
 		case Types.GET_REQUEST:
-			return {... state, loading: true}
+			return {...state, loading: true}
 		case Types.GET_SUCCESS:
-			return { ... state, loading: false, data: action.payload.data}
+			return { ...state, loading: false, data: action.payload.data}
 		default:
 			return state
 	}
