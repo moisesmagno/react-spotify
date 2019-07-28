@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
@@ -12,8 +13,39 @@ import ClockIcon from "../../assets/images/clock.svg";
 import PlusIcon from "../../assets/images/plus.svg";
 
 class Playlist extends Component {
+	static propType = {
+		match: PropTypes.shape({
+			params: PropTypes.shape({
+				id: PropTypes.number
+			})
+		}).isRequired,
+		getPlaylistDetailsRequest: PropTypes.func.isRequired,
+		playlistDetails: PropTypes.shape({
+			loading: PropTypes.bool,
+			data: PropTypes.shape({
+				thumbnail: PropTypes.string,
+				title: PropTypes.string,
+				description: PropTypes.string,
+				songs: PropTypes.arrayOf(
+					PropTypes.shape({
+						id: PropTypes.number,
+						title: PropTypes.string,
+						author: PropTypes.string,
+						album: PropTypes.string
+					})
+				)
+			})
+		}).isRequired
+	};
+
 	componentDidMount() {
 		this.loadPlaylistDetails();
+	}
+
+	componentDidUpdate(prevProps) {
+		if (prevProps.match.params.id !== this.props.match.params.id) {
+			this.loadPlaylistDetails();
+		}
 	}
 
 	loadPlaylistDetails() {
@@ -40,17 +72,21 @@ class Playlist extends Component {
 				</Header>
 				<SongList cellPadding={0}>
 					<thead>
-						<th />
-						<th>Titulo</th>
-						<th>Artista</th>
-						<th>Álbum</th>
-						<th>
-							<img src={ClockIcon} alt="Clock Icon" />
-						</th>
+						<tr>
+							<th />
+							<th>Titulo</th>
+							<th>Artista</th>
+							<th>Álbum</th>
+							<th>
+								<img src={ClockIcon} alt="Clock Icon" />
+							</th>
+						</tr>
 					</thead>
 					<tbody>
 						{!playlist.songs ? (
-							<td colspan="5">Nenhuma música cadastrada</td>
+							<tr>
+								<td colSpan="5">Nenhuma música cadastrada</td>
+							</tr>
 						) : (
 							playlist.songs.map(song => (
 								<tr key={song.id}>

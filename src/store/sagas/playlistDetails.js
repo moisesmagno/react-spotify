@@ -10,8 +10,6 @@ export function* getPlaylistDetails(action) {
 			`/playlists/${action.payload.id}?_embed=songs`
 		);
 
-		yield console.log(response);
-
 		yield put(
 			playlistsDetailsActions.getPlaylistDetailsSuccess(response.data)
 		);
