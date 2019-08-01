@@ -19,7 +19,7 @@ const ErrorBox = ({ error: { message, visible }, setHide }) =>
 		</Container>
 	);
 
-ErrorBox.PropTypes = {
+ErrorBox.propTypes = {
 	setHide: PropTypes.func.isRequired,
 	error: PropTypes.shape({
 		message: PropTypes.string,

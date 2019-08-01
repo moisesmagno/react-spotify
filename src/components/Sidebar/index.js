@@ -49,31 +49,31 @@ class Sidebar extends Component {
 							<span>Sua biblioteca</span>
 						</li>
 						<li>
-							<a href="#">Seu Daily Mix</a>
+							<a href="/">Seu Daily Mix</a>
 						</li>
 						<li>
-							<a href="#">Tocados recentemente</a>
+							<a href="/">Tocados recentemente</a>
 						</li>
 						<li>
-							<a href="#">Músicas</a>
+							<a href="/">Músicas</a>
 						</li>
 						<li>
-							<a href="#">Álbuns</a>
+							<a href="/">Álbuns</a>
 						</li>
 						<li>
-							<a href="#">Artistas</a>
+							<a href="/">Artistas</a>
 						</li>
 						<li>
-							<a href="#">Estações</a>
+							<a href="/">Estações</a>
 						</li>
 						<li>
-							<a href="#">Arquivos Locais</a>
+							<a href="/">Arquivos Locais</a>
 						</li>
 						<li>
-							<a href="#">Vídeos</a>
+							<a href="/">Vídeos</a>
 						</li>
 						<li>
-							<a href="#">Podcast</a>
+							<a href="/">Podcast</a>
 						</li>
 					</Nav>
 
