@@ -1,7 +1,7 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from "styled-components";
 
 // Importar os estilos globais do rc-slider
-import 'rc-slider/assets/index.css';
+import "rc-slider/assets/index.css";
 
 const GlobalStyle = createGlobalStyle`
 	* {
@@ -22,8 +22,10 @@ const GlobalStyle = createGlobalStyle`
         font-family: "Montserrat", sans-serif;
         color: #fff;
 	}
+
+	button {
+		cursor: pointer;
+	}
 `;
 
 export default GlobalStyle;
-
-

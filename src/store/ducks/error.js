@@ -11,7 +11,7 @@ const INITIAL_STATE = {
 export default function error(state = INITIAL_STATE, action) {
 	switch (action.type) {
 		case Types.SET:
-			return { ...state, visible: true, message: action.payload.message };
+			return { ...state, visible: true, message: action.payload };
 		case Types.HIDE:
 			return { ...state, visible: false };
 		default:

@@ -15,6 +15,7 @@ export function* getPlaylistDetails(action) {
 			playlistsDetailsActions.getPlaylistDetailsSuccess(response.data)
 		);
 	} catch (error) {
+		console.log(error);
 		yield put(
 			errorActions.setError(
 				"Não foi possivel listar os detalhes da playlist"
