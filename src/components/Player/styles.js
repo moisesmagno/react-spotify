@@ -1,15 +1,16 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-export const Container = styled.div `
+export const Container = styled.div`
 	height: 72px;
 	display: flex;
-	justify-content: space-between;]
-	align-items: center;
+	justify-content: space-between;
+	]align-items: center;
 	background: #282828;
 	padding: 12px;
 `;
 
 export const Current = styled.div`
+	width: 220px;
 	display: flex;
 	align-items: center;
 
