@@ -104,7 +104,10 @@ class Playlist extends Component {
 										this.setState({ selectedSong: song.id })
 									}
 									onDoubleClick={() =>
-										this.props.loadSong(song)
+										this.props.loadSong(
+											song,
+											playlist.songs
+										)
 									}
 									selected={
 										this.state.selectedSong === song.id
